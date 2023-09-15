@@ -39,56 +39,64 @@ class _CadastroState extends State<Cadastro> {
               ),
               SizedBox(height: 60),
               Container(
-                width: 350,
-                height: 350,
+                width: 390,
+                height: 315,
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue.shade900),
                     borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(8),
+                      padding: EdgeInsets.all(8.0),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "Nome",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(color: Colors.white, fontSize: 15),
                         ),
                       ),
                     ),
-                    TextFormField(
-                      autofocus: true,
-                      textAlign: TextAlign.left,
-                      keyboardType: TextInputType.name,
-                      decoration: InputDecoration(
-                          labelStyle: TextStyle(color: Colors.white),
-                          contentPadding: EdgeInsets.symmetric(vertical: 10),
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(90))),
-                    ),
+                    SizedBox(
+                        height: 40,
+                        width: 355,
+                        child: TextField(
+                          autofocus: true,
+                          textAlign: TextAlign.left,
+                          keyboardType: TextInputType.name,
+                          decoration: InputDecoration(
+                              labelStyle: TextStyle(color: Colors.white),
+                              contentPadding:
+                                  EdgeInsets.symmetric(vertical: 10),
+                              filled: true,
+                              fillColor: Colors.white,
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(30))),
+                        )),
                     Padding(
                       padding: EdgeInsets.all(8),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "E-mail",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(color: Colors.white, fontSize: 15),
                         ),
                       ),
                     ),
-                    TextFormField(
-                      autofocus: true,
-                      textAlign: TextAlign.left,
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                          labelStyle: TextStyle(color: Colors.white),
-                          contentPadding: EdgeInsets.symmetric(vertical: 10),
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(60))),
+                    SizedBox(
+                      height: 40,
+                      width: 355,
+                      child: TextField(
+                        autofocus: true,
+                        textAlign: TextAlign.left,
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: InputDecoration(
+                            labelStyle: TextStyle(color: Colors.white),
+                            contentPadding: EdgeInsets.symmetric(vertical: 10),
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(60))),
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(8),
@@ -96,22 +104,26 @@ class _CadastroState extends State<Cadastro> {
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "Senha",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(color: Colors.white, fontSize: 15),
                         ),
                       ),
                     ),
-                    TextFormField(
-                      autofocus: true,
-                      obscureText: true,
-                      textAlign: TextAlign.left,
-                      keyboardType: TextInputType.text,
-                      decoration: InputDecoration(
-                          labelStyle: TextStyle(color: Colors.white),
-                          contentPadding: EdgeInsets.symmetric(vertical: 10),
-                          filled: true,
-                          fillColor: Colors.white,
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(60))),
+                    SizedBox(
+                      height: 40,
+                      width: 355,
+                      child: TextField(
+                        autofocus: true,
+                        obscureText: true,
+                        textAlign: TextAlign.left,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                            labelStyle: TextStyle(color: Colors.white),
+                            contentPadding: EdgeInsets.symmetric(vertical: 10),
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(60))),
+                      ),
                     ),
                     Padding(
                         padding: EdgeInsets.only(top: 16.0),
@@ -140,7 +152,7 @@ class _CadastroState extends State<Cadastro> {
                 ),
               ),
               SizedBox(
-                  height: 20,
+                  height: 30,
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: ElevatedButton(
