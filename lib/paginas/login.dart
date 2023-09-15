@@ -10,10 +10,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  void a() {
-    print('sla');
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,26 +107,22 @@ class _LoginState extends State<Login> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 20,
-                     child: ElevatedButton(
+                    SizedBox(
+                        height: 30,
+                        child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 backgroundColor:
                                     Color.fromARGB(255, 22, 42, 196)),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Cadastro()));
+                            },
                             child: Text(
                               'Login',
                               style: TextStyle(color: Colors.white),
-                            ))
-                    ),
-                     GestureDetector(
-                      behavior: HitTestBehavior.opaque,
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Cadastro()));
-                      },
-                    ),
+                            ))),
                   ],
                 ),
               )

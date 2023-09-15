@@ -139,18 +139,15 @@ class _CadastroState extends State<Cadastro> {
                   ),
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Login()));
-                },
-              ),
               SizedBox(
                   height: 20,
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Login()));
+                      },
                       style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.all(8),
                           backgroundColor: Color.fromARGB(255, 22, 42, 196)),
