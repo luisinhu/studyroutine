@@ -16,7 +16,6 @@ class _CadastroState extends State<Cadastro> {
       body: Stack(
         children: [
           Container(
-            alignment: Alignment.center,
             decoration: BoxDecoration(
                 gradient: LinearGradient(
                     colors: [Cores.pretogradiente, Cores.azulgradiente])),
@@ -39,8 +38,9 @@ class _CadastroState extends State<Cadastro> {
               ),
               SizedBox(height: 60),
               Container(
-                width: 390,
-                height: 315,
+                width: 339,
+                height: 350,
+                padding: EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue.shade900),
                     borderRadius: BorderRadius.circular(20)),
@@ -56,10 +56,7 @@ class _CadastroState extends State<Cadastro> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                        height: 40,
-                        width: 355,
-                        child: TextField(
+                        TextField(
                           autofocus: true,
                           textAlign: TextAlign.left,
                           keyboardType: TextInputType.name,
@@ -71,7 +68,7 @@ class _CadastroState extends State<Cadastro> {
                               fillColor: Colors.white,
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(30))),
-                        )),
+                        ),
                     Padding(
                       padding: EdgeInsets.all(8),
                       child: Align(
@@ -82,10 +79,8 @@ class _CadastroState extends State<Cadastro> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 40,
-                      width: 355,
-                      child: TextField(
+      
+                      TextField(
                         autofocus: true,
                         textAlign: TextAlign.left,
                         keyboardType: TextInputType.emailAddress,
@@ -97,7 +92,6 @@ class _CadastroState extends State<Cadastro> {
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(60))),
                       ),
-                    ),
                     Padding(
                       padding: EdgeInsets.all(8),
                       child: Align(
@@ -108,10 +102,7 @@ class _CadastroState extends State<Cadastro> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 40,
-                      width: 355,
-                      child: TextField(
+                      TextField(
                         autofocus: true,
                         obscureText: true,
                         textAlign: TextAlign.left,
@@ -124,7 +115,6 @@ class _CadastroState extends State<Cadastro> {
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(60))),
                       ),
-                    ),
                     Padding(
                         padding: EdgeInsets.only(top: 16.0),
                         child: ElevatedButton(
@@ -147,14 +137,14 @@ class _CadastroState extends State<Cadastro> {
                   alignment: Alignment.center,
                   child: Text(
                     "Possui login?",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white,fontSize: 20),
                   ),
                 ),
               ),
               SizedBox(
-                  height: 30,
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                width: 100,
+                child: Padding(
+                    padding: EdgeInsets.only(top: 16.0),
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(context,
@@ -165,10 +155,12 @@ class _CadastroState extends State<Cadastro> {
                           backgroundColor: Color.fromARGB(255, 22, 42, 196)),
                       child: Text(
                         "Entrar",
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white,fontSize: 20),
                       ),
                     ),
-                  ))
+                  )
+              )
+                
             ],
           )
         ],
