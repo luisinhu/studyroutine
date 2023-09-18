@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:studyroutine/_cor/paleta.dart';
 import 'package:studyroutine/paginas/cadastro.dart';
+import 'package:studyroutine/paginas/tela_boas_vindas.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -41,7 +42,7 @@ class _LoginState extends State<Login> {
               ),
               Container(
                 width: 339,
-                height: 350,
+                height: 360,
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                   border: Border.all(
@@ -110,19 +111,40 @@ class _LoginState extends State<Login> {
                     SizedBox(
                         height: 30,
                         child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor:
-                                    Color.fromARGB(255, 22, 42, 196)),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Cadastro()));
-                            },
-                            child: Text(
-                              'Login',
-                              style: TextStyle(color: Colors.white),
-                            ))),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  Color.fromARGB(255, 22, 42, 196)),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => TelaInicial()));
+                          },
+                          child: const Text(
+                            'Login',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        )),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Não tem uma conta? Faça seu cadastro ',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(255, 22, 42, 196)),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: ((context) => Cadastro())));
+                        },
+                        child: Text('Cadastrar', style: TextStyle(color: Colors.white),))
                   ],
                 ),
               )
