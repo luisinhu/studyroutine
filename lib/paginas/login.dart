@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:studyroutine/_cor/paleta.dart';
 import 'package:studyroutine/paginas/cadastro.dart';
+import 'package:studyroutine/paginas/inicio.dart';
 import 'package:studyroutine/paginas/tela_boas_vindas.dart';
 
 class Login extends StatefulWidget {
@@ -68,11 +69,13 @@ class _LoginState extends State<Login> {
                     TextField(
                       textAlign: TextAlign.left,
                       decoration: InputDecoration(
-                          labelStyle: TextStyle(color: Colors.white),
+                          labelStyle: const TextStyle(color: Colors.white),
                           contentPadding:
                               const EdgeInsets.symmetric(vertical: 10),
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(60))),
+                              borderRadius: BorderRadius.circular(60)),
+                          filled: true,
+                          fillColor: Colors.white),
                     ),
                     const Padding(
                       padding: EdgeInsets.all(8),
@@ -90,10 +93,12 @@ class _LoginState extends State<Login> {
                           contentPadding:
                               const EdgeInsets.symmetric(vertical: 10),
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(90))),
+                              borderRadius: BorderRadius.circular(90)),
+                          filled: true,
+                          fillColor: Colors.white),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       child: Row(
                         children: [
                           const Text(
@@ -113,38 +118,41 @@ class _LoginState extends State<Login> {
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  Color.fromARGB(255, 22, 42, 196)),
+                                  const Color.fromARGB(255, 22, 42, 196)),
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => TelaInicial()));
+                                    builder: (context) => const Inicio()));
                           },
                           child: const Text(
                             'Login',
                             style: TextStyle(color: Colors.white),
                           ),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Text(
+                    const Text(
                       'Não tem uma conta? Faça seu cadastro ',
                       style: TextStyle(color: Colors.white),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 22, 42, 196)),
+                            backgroundColor: const Color.fromARGB(255, 22, 42, 196)),
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: ((context) => Cadastro())));
+                                  builder: ((context) => const Cadastro())));
                         },
-                        child: Text('Cadastrar', style: TextStyle(color: Colors.white),))
+                        child: const Text(
+                          'Cadastrar',
+                          style: TextStyle(color: Colors.white),
+                        ))
                   ],
                 ),
               )

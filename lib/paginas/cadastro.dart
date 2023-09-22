@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:studyroutine/_cor/paleta.dart';
 import 'package:studyroutine/paginas/login.dart';
+import 'package:studyroutine/paginas/tela_boas_vindas.dart';
 
 class Cadastro extends StatefulWidget {
   const Cadastro({super.key});
@@ -16,14 +17,14 @@ class _CadastroState extends State<Cadastro> {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(
                     colors: [Cores.pretogradiente, Cores.azulgradiente])),
           ),
           Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 30.0),
+                padding: const EdgeInsets.only(top: 30.0),
                 child: Center(
                   child: Image.asset(
                     "assets/images/logo.png",
@@ -32,21 +33,21 @@ class _CadastroState extends State<Cadastro> {
                   ),
                 ),
               ),
-              Text(
+              const Text(
                 "CADASTRO",
                 style: TextStyle(color: Colors.white),
               ),
-              SizedBox(height: 60),
+              const SizedBox(height: 60),
               Container(
                 width: 339,
                 height: 350,
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue.shade900),
                     borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   children: [
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Align(
                         alignment: Alignment.centerLeft,
@@ -56,20 +57,19 @@ class _CadastroState extends State<Cadastro> {
                         ),
                       ),
                     ),
-                        TextField(
-                          autofocus: true,
-                          textAlign: TextAlign.left,
-                          keyboardType: TextInputType.name,
-                          decoration: InputDecoration(
-                              labelStyle: TextStyle(color: Colors.white),
-                              contentPadding:
-                                  EdgeInsets.symmetric(vertical: 10),
-                              filled: true,
-                              fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(30))),
-                        ),
-                    Padding(
+                    TextField(
+                      autofocus: true,
+                      textAlign: TextAlign.left,
+                      keyboardType: TextInputType.name,
+                      decoration: InputDecoration(
+                          labelStyle: const TextStyle(color: Colors.white),
+                          contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30))),
+                    ),
+                    const Padding(
                       padding: EdgeInsets.all(8),
                       child: Align(
                         alignment: Alignment.centerLeft,
@@ -79,20 +79,19 @@ class _CadastroState extends State<Cadastro> {
                         ),
                       ),
                     ),
-      
-                      TextField(
-                        autofocus: true,
-                        textAlign: TextAlign.left,
-                        keyboardType: TextInputType.emailAddress,
-                        decoration: InputDecoration(
-                            labelStyle: TextStyle(color: Colors.white),
-                            contentPadding: EdgeInsets.symmetric(vertical: 10),
-                            filled: true,
-                            fillColor: Colors.white,
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(60))),
-                      ),
-                    Padding(
+                    TextField(
+                      autofocus: true,
+                      textAlign: TextAlign.left,
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                          labelStyle: const TextStyle(color: Colors.white),
+                          contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(60))),
+                    ),
+                    const Padding(
                       padding: EdgeInsets.all(8),
                       child: Align(
                         alignment: Alignment.centerLeft,
@@ -102,28 +101,33 @@ class _CadastroState extends State<Cadastro> {
                         ),
                       ),
                     ),
-                      TextField(
-                        autofocus: true,
-                        obscureText: true,
-                        textAlign: TextAlign.left,
-                        keyboardType: TextInputType.text,
-                        decoration: InputDecoration(
-                            labelStyle: TextStyle(color: Colors.white),
-                            contentPadding: EdgeInsets.symmetric(vertical: 10),
-                            filled: true,
-                            fillColor: Colors.white,
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(60))),
-                      ),
+                    TextField(
+                      autofocus: true,
+                      obscureText: true,
+                      textAlign: TextAlign.left,
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
+                          labelStyle: const TextStyle(color: Colors.white),
+                          contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(60))),
+                    ),
                     Padding(
-                        padding: EdgeInsets.only(top: 16.0),
+                        padding: const EdgeInsets.only(top: 16.0),
                         child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) => const TelaInicial())));
+                            },
                             style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.all(8),
+                                padding: const EdgeInsets.all(8),
                                 backgroundColor:
-                                    Color.fromARGB(255, 22, 42, 196)),
-                            child: Text(
+                                    const Color.fromARGB(255, 22, 42, 196)),
+                            child: const Text(
                               "Cadastrar",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
@@ -131,36 +135,34 @@ class _CadastroState extends State<Cadastro> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(
                     "Possui login?",
-                    style: TextStyle(color: Colors.white,fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
               ),
               SizedBox(
-                width: 100,
-                child: Padding(
-                    padding: EdgeInsets.only(top: 16.0),
+                  width: 100,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 16.0),
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Login()));
+                            MaterialPageRoute(builder: (context) => const Login()));
                       },
                       style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.all(8),
-                          backgroundColor: Color.fromARGB(255, 22, 42, 196)),
-                      child: Text(
+                          padding: const EdgeInsets.all(8),
+                          backgroundColor: const Color.fromARGB(255, 22, 42, 196)),
+                      child: const Text(
                         "Entrar",
-                        style: TextStyle(color: Colors.white,fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                     ),
-                  )
-              )
-                
+                  ))
             ],
           )
         ],
