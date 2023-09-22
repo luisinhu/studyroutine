@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:studyroutine/_cor/paleta.dart';
+import 'package:studyroutine/paginas/inicio.dart';
 
 class TelaInicial extends StatefulWidget {
   const TelaInicial({super.key});
@@ -39,27 +40,18 @@ class _TelaInicialState extends State<TelaInicial> {
               style: TextStyle(fontSize: 15, color: Colors.white),
             ),
           ),
+        
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Align(
-                alignment: Alignment.bottomLeft,
-                child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.all(8.0),
-                        backgroundColor:
-                            const Color.fromARGB(255, 22, 42, 196)),
-                    child: const Text(
-                      "Sair",
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                    ))),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(40.0),
             child: Align(
                 alignment: Alignment.bottomRight,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Inicio()));
+                    },
                     style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.all(8.0),
                         backgroundColor:
